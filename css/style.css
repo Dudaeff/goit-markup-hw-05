@@ -150,7 +150,7 @@ button {
   left: 0;
   bottom: -1px;
 
-  transform: scaleX(0%);
+  transform: scaleX(0);
   transition: background-color var(--transition-time-end-timing),
     transform var(--transition-time-end-timing);
 }
@@ -163,7 +163,7 @@ button {
   border-radius: 2px;
   background-color: var(--accent-color);
 
-  transform: scaleX(100%);
+  transform: scaleX(1);
 }
 
 .current {
@@ -724,14 +724,14 @@ button {
   opacity: 0;
   pointer-events: none;
 }
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%);
-  transition: transform var(--transition-time-end-timing);
-}
 /* ===backdrop-end=== */
 
 /* ===modal-window=== */
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) translateY(50%);
+  transition: visibility var(--transition-time-end-timing);
+}
+
 .modal {
   position: absolute;
   left: 50%;
@@ -739,13 +739,13 @@ button {
   width: 528px;
   height: 582px;
 
-  transform: translate(-50%, -50%);
-  transition: transform var(--transition-time-end-timing);
-
   background-color: var(--primary-page-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transform: translate(-50%, -50%) translateY(0);
+  transition: transform var(--transition-time-end-timing);
 }
 
 .close-btn {
