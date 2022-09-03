@@ -49,7 +49,7 @@
         <section class="hero"> <!--Секція 1-->
             <div class="container">
                 <h1 class="hero-slogan">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="hero-btn">Замовити послугу</button>
+                <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
             </div>
         </section>
 
@@ -105,10 +105,25 @@
             <div class="container">
                 <h2 class="directions-header">Чим ми займаємося</h2>
                 <ul class="directions-list list">
-                    <li><img src="./images/box_1.jpg" alt="Процес написання коду на комп'ютері з додатковим екраном планшета"
-                            width="370"></li>
-                    <li><img src="./images/box_2.jpg" alt="На екрані ноутбука три види інтерфейсу мобільного додатку" width="370"></li>
-                    <li><img src="./images/box_3.jpg" alt="Дизайнер на планшеті вибирає колір з палітри кольорів" width="370"></li>
+                    <li class="directions-list-item">
+                        <img src="./images/box_1.jpg" alt="Процес написання коду на комп'ютері з додатковим екраном планшета" width="370">
+                        <div class="label-wrapper">
+                            <p class="direction-label">Десктопні додатки</p>
+                        </div>
+                    </li>
+                    <li class="directions-list-item">
+                        <img src="./images/box_2.jpg" alt="На екрані ноутбука три види інтерфейсу мобільного додатку" width="370">
+                        <div class="label-wrapper">
+                            <p class="direction-label">Мобільні додатки</p>
+                        </div>
+                        
+                    </li>
+                    <li class="directions-list-item">
+                        <img src="./images/box_3.jpg" alt="Дизайнер на планшеті вибирає колір з палітри кольорів" width="370">
+                        <div class="label-wrapper">
+                            <p class="direction-label">Дизайнерські рішення</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -377,5 +392,17 @@
         </div>
     
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>
+                <svg class="close-icon" width="18" height="18">
+                    <use lang="en" aria-label="icon close" href="./images/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
