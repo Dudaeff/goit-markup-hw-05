@@ -98,6 +98,7 @@ button {
 
   color: var(--accent-color);
 }
+
 /* ====general-logo-items-end=== */
 
 /* ====header=== */
@@ -150,6 +151,11 @@ button {
   left: 0;
   bottom: -1px;
 
+  width: 100%;
+  height: 4px;
+
+  border-radius: 2px;
+
   transform: scaleX(0);
   transition: background-color var(--transition-time-end-timing),
     transform var(--transition-time-end-timing);
@@ -157,10 +163,6 @@ button {
 
 .menu-links:hover::before,
 .menu-links:focus::before {
-  width: 100%;
-  height: 4px;
-
-  border-radius: 2px;
   background-color: var(--accent-color);
 
   transform: scaleX(1);
@@ -181,6 +183,7 @@ button {
   border-radius: 2px;
   background-color: var(--accent-color);
 }
+
 /* ====menu-end=== */
 
 /* ====contacts== */
@@ -233,11 +236,9 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--bg-hero-color);
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
+      rgba(47, 48, 58, 0.4)),
     url(../images/hero-image.jpg);
 }
 
@@ -276,6 +277,7 @@ button {
   background: var(--accent-active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
 /* ===section-hero-end=== */
 
 /* ===sectin-features=== */
@@ -304,6 +306,7 @@ button {
   margin-bottom: 10px;
 
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -315,6 +318,7 @@ button {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
+
 /* ===section-features-end=== */
 
 /* ===section-directions=== */
@@ -329,14 +333,11 @@ button {
 
 .directions-list-item {
   position: relative;
-  height: 294px;
-  object-fit: contain;
 }
 
-.label-wrapper {
+.direction-label {
   position: absolute;
   bottom: 0;
-  overflow: auto;
 
   display: flex;
   align-items: center;
@@ -344,18 +345,14 @@ button {
   width: 100%;
   height: 70px;
 
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
-.direction-label {
   font-weight: 700;
   line-height: 1.43;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-page-color);
 
-  padding: 14px;
+  background-color: rgba(47, 48, 58, 0.8);
 }
+
 /* ===section-directions-end=== */
 
 /* ===directions-and-team-headers== */
@@ -371,6 +368,7 @@ button {
   letter-spacing: 0.03em;
   color: var(--headers-color);
 }
+
 /* ===directions-and-team-headers== */
 
 /* ===section-team=== */
@@ -484,6 +482,7 @@ button {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
+
 /* ===section-team-end=== */
 /* ====main-studio-end==== */
 
@@ -521,6 +520,7 @@ button {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--primary-page-color);
 }
+
 /* ===filter-buttons-end=== */
 
 /* ===portfolio-projects=== */
@@ -598,6 +598,7 @@ button {
   border: 1px solid var(--project-border-color);
   border-top: none;
 }
+
 /* ===portfolio-projects-end=== */
 /*=======portfolio=page-end========*/
 
@@ -675,6 +676,7 @@ button {
   display: flex;
   column-gap: 10px;
 }
+
 .social-list-item {
   display: flex;
   justify-content: center;
@@ -682,6 +684,7 @@ button {
   width: 44px;
   height: 44px;
 }
+
 .footer-social-links {
   display: flex;
   justify-content: center;
@@ -704,6 +707,7 @@ button {
 .footer-social-links:focus {
   background-color: var(--accent-color);
 }
+
 /* ===footer-end=== */
 
 /* ===backdrop=== */
@@ -724,12 +728,12 @@ button {
   opacity: 0;
   pointer-events: none;
 }
+
 /* ===backdrop-end=== */
 
 /* ===modal-window=== */
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) translateY(50%);
-  transition: visibility var(--transition-time-end-timing);
+  transform: translate(-50%, -50%) translateY(100%);
 }
 
 .modal {
@@ -745,7 +749,8 @@ button {
   border-radius: 4px;
 
   transform: translate(-50%, -50%) translateY(0);
-  transition: transform var(--transition-time-end-timing);
+  transition: transform var(--transition-time-end-timing),
+    visibility var(--transition-time-end-timing);
 }
 
 .close-btn {
@@ -768,4 +773,5 @@ button {
 .close-icon {
   fill: var(--accent-second-color);
 }
+
 /* ===modal-window-end=== */
